@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Global base ─────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0a0a14;
+    color: #f1f5f9;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: system-ui, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Skip link – visible only on focus (accesibilidad teclado) */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+    background: #7c3aed;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0 0 0.5rem 0;
+  }
+  .skip-link:focus {
+    left: 0;
+    outline: 3px solid #22d3ee;
+    outline-offset: 2px;
+  }
+
+  /* ─── Focus visible global ──────────────────────────── */
+  *:focus-visible {
+    outline: 3px solid #a78bfa;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar gaming */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a78bfa;
+  }
+}
+
+/* ─── Custom utilities ────────────────────────────────── */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-glass {
+    background: rgba(18, 18, 31, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.4),
+                0 0 20px rgba(124, 58, 237, 0.15);
+  }
+
+  .progress-bar {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: #1a1a2e;
+    cursor: pointer;
+    width: 100%;
+  }
+  .progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #a78bfa;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+  }
+  .progress-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #a78bfa;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+  }
+  .progress-bar:focus-visible {
+    outline: 3px solid #22d3ee;
+    outline-offset: 3px;
+  }
+
+  .volume-bar {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: #1a1a2e;
+    cursor: pointer;
+    width: 80px;
+  }
+  .volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #22d3ee;
+    cursor: pointer;
+  }
+  .volume-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #22d3ee;
+    cursor: pointer;
+    border: none;
+  }
+  .volume-bar:focus-visible {
+    outline: 3px solid #22d3ee;
+    outline-offset: 3px;
+  }
+}
