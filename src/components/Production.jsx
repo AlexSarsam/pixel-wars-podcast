@@ -33,10 +33,11 @@ export default function Production() {
         </div>
 
         <div className="bg-purple-950/30 border border-purple-700/30 rounded-2xl p-6">
-          <h3 className="font-bold text-white mb-2">♿ Accesibilidad verificada</h3>
+          <h3 className="font-bold text-white mb-2">♿ Accesibilidad</h3>
           <p className="text-sm text-gray-400">
-            Web verificada con Lighthouse y WAVE. Cumple WCAG 2.1 AA: semántica HTML, navegación por teclado,
-            foco visible, contraste 4.5:1, roles ARIA y transcripción del audio.
+            Me aseguré de que la web funcione bien para todo el mundo: se puede navegar solo con teclado,
+            los colores tienen suficiente contraste y el audio tiene transcripción por si no puedes escucharlo.
+            Lo revisé con Lighthouse y WAVE.
           </p>
         </div>
       </div>
