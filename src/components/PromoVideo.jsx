@@ -1,5 +1,4 @@
 const VIDEO_ID = 'Vbw3ihWfEOM'
-const hasVideo = VIDEO_ID !== 'TU_VIDEO_ID_AQUI'
 
 export default function PromoVideo() {
   return (
@@ -9,22 +8,14 @@ export default function PromoVideo() {
         <p className="text-gray-400 mb-8">El tráiler oficial de Pixel Wars.</p>
 
         <div className="bg-[#12121f] border border-purple-900/30 rounded-2xl overflow-hidden">
-          {hasVideo ? (
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}`}
-                title="Vídeo promocional Pixel Wars"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
-          ) : (
-            <div className="p-16 text-gray-500">
-              <p className="text-4xl mb-4">▶</p>
-              <p>Vídeo próximamente</p>
-              <p className="text-xs mt-2">Cambia VIDEO_ID en PromoVideo.jsx</p>
-            </div>
-          )}
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}`}
+              title="Vídeo promocional Pixel Wars"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
         </div>
       </div>
     </section>
