@@ -50,6 +50,13 @@ export default function ContactForm() {
               className="w-full bg-[#0a0a14] border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm resize-y"
               required aria-required="true" />
           </div>
+          <div>
+            <label htmlFor="grabacion" className="block text-sm text-gray-200 mb-1">Tu grabación (opcional)</label>
+            <input id="grabacion" name="grabacion" type="file" accept="audio/*"
+              className="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-purple-800 file:text-white hover:file:bg-purple-700 cursor-pointer"
+              aria-describedby="grabacion-hint" />
+            <p id="grabacion-hint" className="text-xs text-gray-500 mt-1">Formatos aceptados: MP3, WAV, OGG, M4A</p>
+          </div>
           <button type="submit" className="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl">
             ✉️ Enviar mensaje
           </button>
